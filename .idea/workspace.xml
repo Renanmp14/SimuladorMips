@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f00410f-cddd-4d64-ac24-e0f251530384" name="Changes" comment="Classes auxiliares pra as instrucoes em cada estagio do pipeline">
+    <list default="true" id="9f00410f-cddd-4d64-ac24-e0f251530384" name="Changes" comment="Correcao do caso de teste">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InstrucaoBusca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InstrucaoBusca.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MIPS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MIPS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,12 +71,21 @@
       <option name="project" value="LOCAL" />
       <updated>1714328534690</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Correcao do caso de teste">
+      <option name="closed" value="true" />
+      <created>1714329793406</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714329793406</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Escopo da classe MIPS" />
     <MESSAGE value="Classes auxiliares pra as instrucoes em cada estagio do pipeline" />
-    <option name="LAST_COMMIT_MESSAGE" value="Classes auxiliares pra as instrucoes em cada estagio do pipeline" />
+    <MESSAGE value="Correcao do caso de teste" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correcao do caso de teste" />
   </component>
 </project>

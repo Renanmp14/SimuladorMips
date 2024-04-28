@@ -13,7 +13,7 @@ public class MIPS {
     public MIPS(String[] instructions) {
         this.instrucoes = instructions;
         pc = 0;
-        instrucaoIF = new InstrucaoBusca();
+        instrucaoIF = new InstrucaoBusca(instrucoes);
         instrucaoID = new InstrucaoDecode();
         instrucaoEX = new InstrucaoExecuta();
         instrucaoMEM = new InstrucaoMemoria();
@@ -33,13 +33,13 @@ public class MIPS {
     }
 
     private void buscaInstrucao() {
-        instrucaoIF.setInstrucao(instrucoes[pc]);
+        //instrucaoIF.setInstrucao(instrucoes[pc]);
         instrucaoIF.execute();
         pc++;
     }
 
     private void decodifica() {
-        instrucaoID.setInstrucao(instrucaoIF.getInstrucao());
+       // instrucaoID.setInstrucao(instrucaoIF.getInstrucao());
         instrucaoID.execute();
     }
 
