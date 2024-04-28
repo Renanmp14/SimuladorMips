@@ -13,5 +13,19 @@ public class InstrucaoDecode {
         if(instrucao.contains("addi")){
 
         }
+        else if (instrucao.contains("nopp")){
+            String tarefa = "Pula Instrução";
+        }
+        else if (instrucao.contains("loop")){
+
+        } else if (instrucao.contains("beq")) {
+
+        }
+        else if (instrucao.contains("J")){
+
+        }
+        else{
+            System.out.println("Error");
+        }
     }
 }
