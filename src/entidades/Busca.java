@@ -1,11 +1,13 @@
+package entidades;
+
 import java.util.Arrays;
 
-public class InstrucaoBusca {
+public class Busca {
     private String[] instrucoes;
     private int pc;
     private String[] instrucaoAtual;
 
-    public InstrucaoBusca(String[] instrucoes) {
+    public Busca(String[] instrucoes) {
         this.instrucoes = instrucoes;
         this.pc = 0;
     }
