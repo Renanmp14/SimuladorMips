@@ -23,6 +23,11 @@ public class MIPS {
     public void run() {
         while (pc < instrucoes.length || pipelineBusy()) {
             System.out.println("Clock Cycle: " + clockCycle);
+            try {
+                Thread.sleep(2000); // 2000 milissegundos = 2 segundos
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             buscaInstrucao();
             decodifica();
             executa();
@@ -33,14 +38,14 @@ public class MIPS {
     }
 
     private void buscaInstrucao() {
-        //instrucaoIF.setInstrucao(instrucoes[pc]);
-        instrucaoIF.execute();
+        String instrucaoAtual = instrucoes[pc];
         pc++;
+        instrucaoID.setInstrucao(instrucaoAtual);
     }
 
     private void decodifica() {
-       // instrucaoID.setInstrucao(instrucaoIF.getInstrucao());
-        instrucaoID.execute();
+        String instrucaoAtual = instrucaoID.getInstrucao();
+        instrucaoEX.setInstrucao(instrucaoAtual);
     }
 
     private void executa() {

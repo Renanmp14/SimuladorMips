@@ -3,6 +3,7 @@ public class Main {
         int neg1 = -1;
         int ten = 10;
         int one = 1;
+        int done = Integer.MIN_VALUE;
 
         String[] instrucoes = {
                 "addi R0 R1 " + neg1,
@@ -12,7 +13,7 @@ public class Main {
                 "loop add 2 1 2",
                 "noop",
                 "noop",
-                "beq 2 0 done",
+                "beq 2 0 " + done,
                 "noop",
                 "noop",
                 "noop",
