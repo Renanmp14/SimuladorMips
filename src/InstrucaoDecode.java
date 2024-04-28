@@ -10,6 +10,8 @@ public class InstrucaoDecode {
     }
 
     public void execute() {
-        // Implemente a lógica do estágio ID aqui
+        if(instrucao.contains("addi")){
+
+        }
     }
 }
