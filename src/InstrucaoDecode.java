@@ -9,14 +9,17 @@ public class InstrucaoDecode {
         return instrucao;
     }
 
-    public void execute() {
-        if(instrucao.contains("addi")){
-
+    public String[] execute() {
+        if(instrucao.contains("addi") || instrucao.contains("add") ||
+                instrucao.contains("sub") || instrucao.contains("subi")){
+            return instrucao.split("");
         }
-        else if (instrucao.contains("nopp")){
+        else if (instrucao.contains("noop")){
             String tarefa = "Pula Instrução";
+            return null;
         }
         else if (instrucao.contains("loop")){
+            return instrucao.split("");
 
         } else if (instrucao.contains("beq")) {
 
@@ -27,5 +30,8 @@ public class InstrucaoDecode {
         else{
             System.out.println("Error");
         }
+        return null;
     }
+
+
 }

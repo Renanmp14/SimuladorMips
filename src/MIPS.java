@@ -1,5 +1,5 @@
 public class MIPS {
-    private int[] registradores = new int[32];
+    private int[] registradores = new int[31];
     private int[] memoria = new int[1024];
     private int pc;
     private int clockCycle;
@@ -45,6 +45,34 @@ public class MIPS {
 
     private void decodifica() {
         String instrucaoAtual = instrucaoID.getInstrucao();
+
+        /*if(instrucaoAtual.contains("addi") || instrucaoAtual.contains("add") ||
+                instrucaoAtual.contains("sub") || instrucaoAtual.contains("subi")){
+                String[] fields = instrucaoAtual.split(" ");
+                String OpCode = fields[0];
+                registradores Integer.parseInt(fields[1].charAt(1));
+
+                //TipoDaInstrução R
+        }
+        else if (instrucaoAtual.contains("noop")){
+            String tarefa = "Pula Instrução";
+
+        }
+        else if (instrucaoAtual.contains("loop")){
+                //TipoDaInstrução j
+
+        } else if (instrucaoAtual.contains("beq")) {
+                //TipoDaInstrução I
+        }
+        else if (instrucaoAtual.contains("J")){
+
+        }
+        else{
+            System.out.println("Error");
+        }
+        */
+
+
         instrucaoEX.setInstrucao(instrucaoAtual);
     }
 
