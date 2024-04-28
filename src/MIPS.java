@@ -4,10 +4,20 @@ public class MIPS {
     private int pc;
     private int clockCycle;
     private String[] instrucoes;
+    private InstrucaoBusca instrucaoIF;
+    private InstrucaoDecode instrucaoID;
+    private InstrucaoExecuta instrucaoEX;
+    private InstrucaoMemoria instrucaoMEM;
+    private InstrucaoEscreve instrucaoWB;
 
     public MIPS(String[] instructions) {
         this.instrucoes = instructions;
         pc = 0;
+        instrucaoIF = new InstrucaoBusca();
+        instrucaoID = new InstrucaoDecode();
+        instrucaoEX = new InstrucaoExecuta();
+        instrucaoMEM = new InstrucaoMemoria();
+        instrucaoWB = new InstrucaoEscreve();
     }
 
     public void run() {
@@ -23,26 +33,34 @@ public class MIPS {
     }
 
     private void buscaInstrucao() {
-        // Busca a instrução na memória de instruções
+        instrucaoIF.setInstrucao(instrucoes[pc]);
+        instrucaoIF.execute();
+        pc++;
     }
 
     private void decodifica() {
-        // Decodifica a instrução
+        instrucaoID.setInstrucao(instrucaoIF.getInstrucao());
+        instrucaoID.execute();
     }
 
     private void executa() {
-        // Executa a operação da instrução
+        instrucaoEX.setInstrucao(instrucaoID.getInstrucao());
+        instrucaoEX.execute();
     }
 
     private void acessoMemoria() {
-        // Acesso à memória, se necessário
+        instrucaoMEM.setInstrucao(instrucaoEX.getInstrucao());
+        instrucaoMEM.execute();
     }
 
     private void escreveRegistrador() {
-        // Escreve o resultado de volta nos registradores
+        instrucaoWB.setInstrucao(instrucaoMEM.getInstrucao());
+        instrucaoWB.execute();
     }
 
     private boolean pipelineBusy() {
         return false; // Implemente a lógica adequada aqui se necessário
     }
+
+    // Classes internas para representar cada estágio do pipeline
 }

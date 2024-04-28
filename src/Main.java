@@ -1,8 +1,6 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        String[] instructions = {
+        String[] intrucoes = {
                 "lw 0 1 neg1",
                 "lw 0 2 ten",
                 "lw 0 3 one",
@@ -17,7 +15,7 @@ public class Main {
                 "ten   .fill 10",
                 "one   .fill 1"
         };
-        MIPS simulator = new MIPS(instructions);
-        simulator.run();
+        MIPS simulador = new MIPS(intrucoes);
+        simulador.run();
     }
 }
