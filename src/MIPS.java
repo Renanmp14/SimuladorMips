@@ -62,5 +62,4 @@ public class MIPS {
         return false; // Implemente a lógica adequada aqui se necessário
     }
 
-    // Classes internas para representar cada estágio do pipeline
 }
