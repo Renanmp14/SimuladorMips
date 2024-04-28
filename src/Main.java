@@ -1,5 +1,9 @@
 public class Main {
     public static void main(String[] args) {
+        int neg1 = -1;
+        int ten = 10;
+        int one = 1;
+
         String[] instrucoes = {
                 "addi R0 R1 neg1",
                 "addi R0 R2 ten",
@@ -15,11 +19,7 @@ public class Main {
                 "beq 0 0 loop",
                 "noop",
                 "noop",
-                "noop",
-                "done halt",
-                "neg1 .fill -1",
-                "ten .fill 10",
-                "one .fill 1"
+                "noop"
         };
 
         MIPS simulador = new MIPS(instrucoes);
