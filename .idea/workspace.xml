@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f00410f-cddd-4d64-ac24-e0f251530384" name="Changes" comment="Inserção do Noop">
+    <list default="true" id="9f00410f-cddd-4d64-ac24-e0f251530384" name="Changes" comment="Commit projeto com linhas iniciais do trabalho (Funcionando)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entidades/Decode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/Decode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entidades/Escreve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/Escreve.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entidades/Executa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/Executa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entidades/MIPS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/MIPS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/programa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programa/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714355505839</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Commit projeto com linhas iniciais do trabalho (Funcionando)">
+      <option name="closed" value="true" />
+      <created>1714356447319</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714356447319</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -142,21 +153,23 @@
     <MESSAGE value="Correção da verificação de variáveis no primeiro ciclo de execução" />
     <MESSAGE value="Atualização do projeto" />
     <MESSAGE value="Inserção do Noop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inserção do Noop" />
+    <MESSAGE value="Commit projeto com linhas iniciais do trabalho (Funcionando)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit projeto com linhas iniciais do trabalho (Funcionando)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/entidades/MIPS.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="29" />
+          <line>85</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="instrucaoID.instrucao" />
+        <watch expression="this" />
       </configuration>
     </watches-manager>
   </component>

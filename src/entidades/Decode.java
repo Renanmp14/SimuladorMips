@@ -10,8 +10,7 @@ public class Decode {
     }
 
     public Instrucao execute() {
-        if(instrucaoString.contains("addi") || instrucaoString.contains("add") ||
-                instrucaoString.contains("sub") || instrucaoString.contains("subi")){
+        if(instrucaoString.contains("addi") || instrucaoString.contains("subi")){
                 setInstrucao(parserInstrucao(instrucaoString));
                 return getInstrucao();
         }
@@ -20,13 +19,12 @@ public class Decode {
             return getInstrucao();
 
         }
-        else if (instrucaoString.contains("loop")){
-
+        else if (instrucaoString.contains("loop") || instrucaoString.contains("add") ||
+                instrucaoString.contains("sub")){
+            setInstrucao(parserInstrucao(instrucaoString));
+            return getInstrucao();
 
         } else if (instrucaoString.contains("beq")) {
-
-        }
-        else if (instrucaoString.contains("J")){
 
         }
         return null;
@@ -48,6 +46,13 @@ public class Decode {
 
         if (instrucaoString.contains("R")){
             instrucaoString = instrucaoString.replace("R", "");
+        }
+
+        if (instrucaoString.contains("loop")){
+            mips.memoria[11] = mips.pc; //Armazena o pc do inicio do loop
+            String[] fields = instrucaoString.split(" ");
+            return new Instrucao(fields[1], Integer.parseInt(fields[2]), Integer.parseInt(fields[3]),
+                    Integer.parseInt(fields[4]));
         }
         String[] fields = instrucaoString.split(" ");
         return new Instrucao(fields[0], Integer.parseInt(fields[1]), Integer.parseInt(fields[2]),
