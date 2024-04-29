@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f00410f-cddd-4d64-ac24-e0f251530384" name="Changes" comment="Modificação do projeto e teste de funcionamento com somente uma instrução">
+    <list default="true" id="9f00410f-cddd-4d64-ac24-e0f251530384" name="Changes" comment="Correção da verificação de variáveis no primeiro ciclo de execução">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entidades/Decode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/Decode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entidades/Escreve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/Escreve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entidades/Executa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/Executa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entidades/MIPS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/MIPS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/programa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programa/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714347049066</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Correção da verificação de variáveis no primeiro ciclo de execução">
+      <option name="closed" value="true" />
+      <created>1714349043256</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714349043256</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -118,15 +122,36 @@
     <MESSAGE value="Classes auxiliares pra as instrucoes em cada estagio do pipeline" />
     <MESSAGE value="Correcao do caso de teste" />
     <MESSAGE value="Modificação do projeto e teste de funcionamento com somente uma instrução" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modificação do projeto e teste de funcionamento com somente uma instrução" />
+    <MESSAGE value="Correção da verificação de variáveis no primeiro ciclo de execução" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correção da verificação de variáveis no primeiro ciclo de execução" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/programa/Main.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="22" />
+          <url>file://$PROJECT_DIR$/src/entidades/MIPS.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entidades/MIPS.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entidades/MIPS.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entidades/MIPS.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entidades/MIPS.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

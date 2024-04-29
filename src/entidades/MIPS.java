@@ -38,26 +38,32 @@ public class MIPS {
         String instrucaoAtual = instrucoes[pc];
         pc++;
         instrucaoID.setInstrucaoString(instrucaoAtual);
+
     }
 
     private void decodifica() {
         instrucaoID.execute();
         instrucaoEX.setInstrucao(instrucaoID.getInstrucao());
+        buscaInstrucao();
+
     }
 
     private void executa() {
         instrucaoEX.execute();
         instrucaoMEM.setInstrucao(instrucaoEX.getInstrucao());
+        decodifica();
     }
 
     private void acessoMemoria() {
         instrucaoMEM.execute();
         instrucaoWB.setInstrucao(instrucaoMEM.getInstrucao());
         instrucaoWB.setData(instrucaoMEM.getData());
+        executa();
     }
 
     private void escreveRegistrador() {
         instrucaoWB.execute();
+        acessoMemoria();
     }
 
 }
