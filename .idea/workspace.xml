@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f00410f-cddd-4d64-ac24-e0f251530384" name="Changes" comment="Correção da verificação de variáveis no primeiro ciclo de execução">
+    <list default="true" id="9f00410f-cddd-4d64-ac24-e0f251530384" name="Changes" comment="Atualização do projeto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entidades/Decode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/Decode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entidades/Escreve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/Escreve.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entidades/MIPS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/MIPS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/programa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programa/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714349043256</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Atualização do projeto">
+      <option name="closed" value="true" />
+      <created>1714350978006</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714350978006</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -123,7 +134,8 @@
     <MESSAGE value="Correcao do caso de teste" />
     <MESSAGE value="Modificação do projeto e teste de funcionamento com somente uma instrução" />
     <MESSAGE value="Correção da verificação de variáveis no primeiro ciclo de execução" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correção da verificação de variáveis no primeiro ciclo de execução" />
+    <MESSAGE value="Atualização do projeto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualização do projeto" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -140,17 +152,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/entidades/MIPS.java</url>
-          <line>51</line>
+          <line>52</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/entidades/MIPS.java</url>
-          <line>57</line>
+          <line>60</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/entidades/MIPS.java</url>
-          <line>64</line>
+          <line>69</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>

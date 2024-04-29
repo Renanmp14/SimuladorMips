@@ -15,7 +15,6 @@ public class Escreve {
         if (instrucao.getOPCode().contains("addi") || instrucao.getOPCode().contains("add") ||
                 instrucao.getOPCode().contains("sub") || instrucao.getOPCode().contains("subi")) {
             mips.registradores[instrucao.getOperando1()] = data;
-
         }
 
     }

@@ -7,7 +7,8 @@ public class Main {
         String[] instrucoes = {
                 "addi R0 R1 neg1",
                 "addi R0 R2 ten",
-                "addi R0 R3 one"
+                "addi R0 R3 one",
+                "noop"
         };
 
         MIPS simulador = new MIPS(instrucoes);

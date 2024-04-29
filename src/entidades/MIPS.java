@@ -24,7 +24,7 @@ public class MIPS {
 
     public void run() {
         while (pc < instrucoes.length) {
-            System.out.println("Clock Cycle: " + clockCycle);
+            System.out.println("Instruções finalizadas: " + clockCycle);
             buscaInstrucao();
             decodifica();
             executa();
@@ -44,26 +44,33 @@ public class MIPS {
     private void decodifica() {
         instrucaoID.execute();
         instrucaoEX.setInstrucao(instrucaoID.getInstrucao());
-        buscaInstrucao();
-
+        if (instrucoes.length < pc){
+            buscaInstrucao();
+        }
     }
 
     private void executa() {
         instrucaoEX.execute();
         instrucaoMEM.setInstrucao(instrucaoEX.getInstrucao());
-        decodifica();
+        if (instrucoes.length < pc){
+            decodifica();
+        }
     }
 
     private void acessoMemoria() {
         instrucaoMEM.execute();
         instrucaoWB.setInstrucao(instrucaoMEM.getInstrucao());
         instrucaoWB.setData(instrucaoMEM.getData());
-        executa();
+        if (instrucoes.length < pc) {
+            executa();
+        }
     }
 
     private void escreveRegistrador() {
         instrucaoWB.execute();
-        acessoMemoria();
+        if (instrucoes.length < pc) {
+            acessoMemoria();
+        }
     }
 
 }

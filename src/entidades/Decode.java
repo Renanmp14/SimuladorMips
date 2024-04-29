@@ -16,7 +16,8 @@ public class Decode {
                 return getInstrucao();
         }
         else if (instrucaoString.contains("noop")){
-            return new Instrucao("Noop");
+            setInstrucao(new Instrucao("Noop"));
+            return getInstrucao();
 
         }
         else if (instrucaoString.contains("loop")){
