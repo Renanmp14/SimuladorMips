@@ -10,11 +10,13 @@ public class Memoria {
     }
 
     public void execute() {
-        // Implemente a lógica do estágio MEM aqui
         if (instrucao.getOPCode().contains("addi") || instrucao.getOPCode().contains("add") ||
                 instrucao.getOPCode().contains("sub") || instrucao.getOPCode().contains("subi")) {
             data = mips.memoria[0];
             mips.memoria[0] = 0;
+        }else if(instrucao.getOPCode().contains("beq")){
+            data = mips.memoria[1023]; // Recebe ou não a instrução de término
+            mips.memoria[1023] = 0;
         }
     }
 

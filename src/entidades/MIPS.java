@@ -4,43 +4,39 @@ public class MIPS {
     int[] registradores = new int[31];
     int[] memoria = new int[1024];
     int pc;
-    private int clockCycle;
+    private int contadorInstrucoes;
     private String[] instrucoes;
-    private Busca instrucaoIF;
-    private Decode instrucaoID;
+    private Decodifica instrucaoID;
     private Executa instrucaoEX;
     private Memoria instrucaoMEM;
     private Escreve instrucaoWB;
+    boolean halt;
 
     public MIPS(String[] instructions) {
         this.instrucoes = instructions;
         pc = 0;
-        instrucaoIF = new Busca(instrucoes);
-        instrucaoID = new Decode(this);
+        instrucaoID = new Decodifica(this);
         instrucaoEX = new Executa(this);
         instrucaoMEM = new Memoria(this);
         instrucaoWB = new Escreve(this);
+        halt = false;
     }
 
     public void run() {
-        while (clockCycle <= instrucoes.length) {
-            if (clockCycle == 0){
-                System.out.println("Simulador iniciado, instruções finalizadas: " + clockCycle);
+        while (!instrucaoWB.isHalt()) {
+            if (contadorInstrucoes == 0){
+                System.out.println("Simulador iniciado, instruções finalizadas: " + contadorInstrucoes);
                 buscaInstrucao();
                 decodifica();
                 executa();
                 acessoMemoria();
                 escreveRegistrador();
-                clockCycle++;
-            }else if (clockCycle < instrucoes.length){
-                System.out.println("Instruções finalizadas: " + clockCycle);
-                escreveRegistrador();
-                clockCycle++;
+                contadorInstrucoes++;
             }else {
-                System.out.println("Instruções finalizadas: " + clockCycle);
-                clockCycle++;
+                System.out.println("Instruções finalizadas: " + contadorInstrucoes);
+                escreveRegistrador();
+                contadorInstrucoes++;
             }
-
 
         }
     }
@@ -52,6 +48,8 @@ public class MIPS {
             pc++;
 
         }else {
+            halt = true;  //Terminou as instruções, logo, encaminha o processador para o término da execução
+            instrucaoID.setInstrucaoString("halt");
             pc++;
         }
 
@@ -60,7 +58,7 @@ public class MIPS {
     private void decodifica() {
         instrucaoID.execute();
         instrucaoEX.setInstrucao(instrucaoID.getInstrucao());
-        if (instrucoes.length > clockCycle){
+        if (instrucoes.length > contadorInstrucoes){
             buscaInstrucao();
         }
     }
@@ -68,7 +66,7 @@ public class MIPS {
     private void executa() {
         instrucaoEX.execute();
         instrucaoMEM.setInstrucao(instrucaoEX.getInstrucao());
-        if (instrucoes.length > clockCycle){
+        if (instrucoes.length > contadorInstrucoes){
             decodifica();
         }
     }
@@ -77,14 +75,14 @@ public class MIPS {
         instrucaoMEM.execute();
         instrucaoWB.setInstrucao(instrucaoMEM.getInstrucao());
         instrucaoWB.setData(instrucaoMEM.getData());
-        if (instrucoes.length > clockCycle) {
+        if (instrucoes.length > contadorInstrucoes) {
             executa();
         }
     }
 
     private void escreveRegistrador() {
         instrucaoWB.execute();
-        if (instrucoes.length > clockCycle) {
+        if (instrucoes.length > contadorInstrucoes) {
             acessoMemoria();
         }
     }

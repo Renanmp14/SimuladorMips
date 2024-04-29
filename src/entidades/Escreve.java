@@ -1,14 +1,14 @@
 package entidades;
 
-import java.util.MissingFormatArgumentException;
-
 public class Escreve {
     private Instrucao instrucao;
     private int data;
     private MIPS mips;
+    private boolean halt;
 
     public Escreve(MIPS mips) {
         this.mips = mips;
+        halt = false;
     }
 
     public void execute() {
@@ -16,6 +16,10 @@ public class Escreve {
             mips.registradores[instrucao.getOperando2()] = data;
         }else if(instrucao.getOPCode().contains("add") || instrucao.getOPCode().contains("sub")){
             mips.registradores[instrucao.getOperando1()] = data;
+        }else if(data == Integer.MAX_VALUE){
+            halt = true;
+        }else if(instrucao.getOPCode().contains("halt")){
+            halt = true;
         }
 
     }
@@ -34,5 +38,13 @@ public class Escreve {
 
     public void setData(int data) {
         this.data = data;
+    }
+
+    public boolean isHalt() {
+        return halt;
+    }
+
+    public void setHalt(boolean halt) {
+        this.halt = halt;
     }
 }

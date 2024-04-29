@@ -1,11 +1,11 @@
 package entidades;
 
-public class Decode {
+public class Decodifica {
     private String instrucaoString;
     private Instrucao instrucao;
     private MIPS mips;
 
-    public Decode(MIPS mips) {
+    public Decodifica(MIPS mips) {
         this.mips = mips;
     }
 
@@ -25,12 +25,33 @@ public class Decode {
             return getInstrucao();
 
         } else if (instrucaoString.contains("beq")) {
+            setInstrucao(parserInstrucao(instrucaoString));
+            return getInstrucao();
 
+        } else if (instrucaoString.contains("halt")) {
+            setInstrucao(new Instrucao("halt"));
+            return getInstrucao();
         }
         return null;
     }
 
     private Instrucao parserInstrucao(String instrucaoString){
+        if (instrucaoString.contains("beq") && instrucaoString.contains("done")){
+            String[] fields = instrucaoString.split(" ");
+            return new Instrucao(fields[0], Integer.parseInt(fields[1]), Integer.parseInt(fields[2]), Integer.MAX_VALUE);
+
+        }
+        if (instrucaoString.contains("R")){
+            instrucaoString = instrucaoString.replace("R", "");
+        }
+
+        if (instrucaoString.contains("loop")){
+            mips.memoria[11] = mips.pc; //Armazena o pc do inicio do loop
+            String[] fields = instrucaoString.split(" ");
+            return new Instrucao(fields[1], Integer.parseInt(fields[2]), Integer.parseInt(fields[3]),
+                    Integer.parseInt(fields[4]));
+        }
+
         if (instrucaoString.contains("neg1")){
             instrucaoString = instrucaoString.replace("neg1", "-1");
             mips.memoria[10] = -1;  // Indica offset para primeiro ciclo de execução
@@ -42,17 +63,6 @@ public class Decode {
         if (instrucaoString.contains("ten")){
             instrucaoString = instrucaoString.replace("ten", "10");
             mips.memoria[10] = 10;
-        }
-
-        if (instrucaoString.contains("R")){
-            instrucaoString = instrucaoString.replace("R", "");
-        }
-
-        if (instrucaoString.contains("loop")){
-            mips.memoria[11] = mips.pc; //Armazena o pc do inicio do loop
-            String[] fields = instrucaoString.split(" ");
-            return new Instrucao(fields[1], Integer.parseInt(fields[2]), Integer.parseInt(fields[3]),
-                    Integer.parseInt(fields[4]));
         }
         String[] fields = instrucaoString.split(" ");
         return new Instrucao(fields[0], Integer.parseInt(fields[1]), Integer.parseInt(fields[2]),
