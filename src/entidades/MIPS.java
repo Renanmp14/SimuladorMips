@@ -16,7 +16,7 @@ public class MIPS {
         this.instrucoes = instructions;
         pc = 0;
         instrucaoIF = new Busca(instrucoes);
-        instrucaoID = new Decode();
+        instrucaoID = new Decode(this);
         instrucaoEX = new Executa(this);
         instrucaoMEM = new Memoria(this);
         instrucaoWB = new Escreve(this);

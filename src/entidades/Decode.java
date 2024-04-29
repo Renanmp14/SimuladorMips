@@ -3,7 +3,11 @@ package entidades;
 public class Decode {
     private String instrucaoString;
     private Instrucao instrucao;
+    private MIPS mips;
 
+    public Decode(MIPS mips) {
+        this.mips = mips;
+    }
 
     public Instrucao execute() {
         if(instrucaoString.contains("addi") || instrucaoString.contains("add") ||
@@ -30,12 +34,15 @@ public class Decode {
     private Instrucao parserInstrucao(String instrucaoString){
         if (instrucaoString.contains("neg1")){
             instrucaoString = instrucaoString.replace("neg1", "-1");
+            mips.memoria[10] = -1;  // Indica offset para primeiro ciclo de execução
         }
         if (instrucaoString.contains("one")){
            instrucaoString = instrucaoString.replace("one", "1");
+            mips.memoria[10] = 1;
         }
         if (instrucaoString.contains("ten")){
             instrucaoString = instrucaoString.replace("ten", "10");
+            mips.memoria[10] = 10;
         }
 
         if (instrucaoString.contains("R")){
