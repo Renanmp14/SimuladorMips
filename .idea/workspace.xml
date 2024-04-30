@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f00410f-cddd-4d64-ac24-e0f251530384" name="Changes" comment="Alteração na checagem o escreveRegistrador quando acontece o beq loop">
-      <change beforePath="$PROJECT_DIR$/src/entidades/Escreve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/Escreve.java" afterDir="false" />
+    <list default="true" id="9f00410f-cddd-4d64-ac24-e0f251530384" name="Changes" comment="Modificação no halt quando o beq done encontra a condição verdadeira">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entidades/Instrucao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/Instrucao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entidades/MIPS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/MIPS.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714448955810</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Modificação no halt quando o beq done encontra a condição verdadeira">
+      <option name="closed" value="true" />
+      <created>1714449575192</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714449575192</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -150,7 +159,8 @@
     <MESSAGE value="Atualização do projeto" />
     <MESSAGE value="Inserção do Noop" />
     <MESSAGE value="Alteração na checagem o escreveRegistrador quando acontece o beq loop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alteração na checagem o escreveRegistrador quando acontece o beq loop" />
+    <MESSAGE value="Modificação no halt quando o beq done encontra a condição verdadeira" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modificação no halt quando o beq done encontra a condição verdadeira" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -159,6 +169,11 @@
           <url>file://$PROJECT_DIR$/src/entidades/Escreve.java</url>
           <line>19</line>
           <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entidades/MIPS.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

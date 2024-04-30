@@ -48,4 +48,10 @@ public class Instrucao {
     public void setOperando3(int operando3) {
         this.operando3 = operando3;
     }
+
+    @Override
+    public String toString() {
+        return "Instrucao - OPCode: " + OPCode + ", Operando1: " + operando1 +
+                ", Operando2: " + operando2 +  ", Operando3: " + operando3;
+    }
 }

@@ -81,6 +81,8 @@ public class MIPS {
 
     private void escreveRegistrador() {
         instrucaoWB.execute();
+        System.out.println(instrucaoWB.getInstrucao().toString());
+
         instrucaoWB.setData(0);
         acessoMemoria();
     }
