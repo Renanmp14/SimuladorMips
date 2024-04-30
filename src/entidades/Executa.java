@@ -24,7 +24,7 @@ public class Executa {
             }
 
             int soma = (a+b);
-            mips.memoria[0] = soma;
+            mips.memoria[0] = soma; //Armazena o registro da ULA
         }else if(instrucao.getOPCode().contains("add") || instrucao.getOPCode().contains("sub")){
             int a = (instrucao.getOperando2() >= 0 && instrucao.getOperando2() < mips.registradores.length) ?
                     mips.registradores[instrucao.getOperando2()] : instrucao.getOperando2();
@@ -45,7 +45,7 @@ public class Executa {
             int b = (instrucao.getOperando2() >= 0 && instrucao.getOperando2() < mips.registradores.length) ?
                     mips.registradores[instrucao.getOperando2()] : instrucao.getOperando2();
             if (a == b){
-                mips.memoria[1023] = instrucao.getOperando3();
+                mips.memoria[19] = instrucao.getOperando3();
             }
 
         }else if(instrucao.getOPCode().contains("beq") && instrucao.getOperando3() == mips.memoria[11]){
@@ -54,7 +54,7 @@ public class Executa {
             int b = (instrucao.getOperando2() >= 0 && instrucao.getOperando2() < mips.registradores.length) ?
                     mips.registradores[instrucao.getOperando2()] : instrucao.getOperando2();
             if (a == b){
-                mips.memoria[1023] = instrucao.getOperando3();
+                mips.memoria[19] = instrucao.getOperando3();
             }
 
         }

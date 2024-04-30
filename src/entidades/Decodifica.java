@@ -49,10 +49,7 @@ public class Decodifica {
         }
 
         if (instrucaoString.contains("loop")){
-
-            mips.memoria[11] = (mips.pc - 1);
-
-            //Armazena o pc do inicio do loop
+            mips.memoria[11] = (mips.pc - 1);  //Armazena o pc do inicio do loop
             String[] fields = instrucaoString.split(" ");
             return new Instrucao(fields[1], Integer.parseInt(fields[2]), Integer.parseInt(fields[3]),
                     Integer.parseInt(fields[4]));
@@ -60,7 +57,7 @@ public class Decodifica {
 
         if (instrucaoString.contains("neg1")){
             instrucaoString = instrucaoString.replace("neg1", "-1");
-            mips.memoria[10] = -1;  // Indica offset para primeiro ciclo de execução
+            mips.memoria[10] = -1;  // Indica uma posição da memoria do mips para armazenar o valor da "variável"
         }
         if (instrucaoString.contains("one")){
            instrucaoString = instrucaoString.replace("one", "1");

@@ -15,8 +15,8 @@ public class Memoria {
             data = mips.memoria[0];
             mips.memoria[0] = 0;
         }else if(instrucao.getOPCode().contains("beq")){
-            data = mips.memoria[1023]; // Recebe ou não a instrução de término
-            mips.memoria[1023] = 0;
+            data = mips.memoria[19]; // Recebe ou não a instrução de término
+            mips.memoria[19] = 0;
         }
     }
 

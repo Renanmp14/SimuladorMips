@@ -2,7 +2,7 @@ package entidades;
 
 public class MIPS {
     int[] registradores = new int[31];
-    int[] memoria = new int[1024];
+    int[] memoria = new int[20];
     int pc;
     private int contadorInstrucoes;
     String[] instrucoes;
