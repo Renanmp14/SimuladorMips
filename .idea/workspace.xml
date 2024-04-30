@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f00410f-cddd-4d64-ac24-e0f251530384" name="Changes" comment="Alteração nas chamadas do pipeline">
+    <list default="true" id="9f00410f-cddd-4d64-ac24-e0f251530384" name="Changes" comment="Inserção do Noop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entidades/Decodifica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/Decodifica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entidades/Escreve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/Escreve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entidades/Executa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/Executa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entidades/MIPS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/MIPS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/programa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programa/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,39 +130,7 @@
       <option name="project" value="LOCAL" />
       <updated>1714355505839</updated>
     </task>
-    <task id="LOCAL-00008" summary="Commit projeto com linhas iniciais do trabalho (Funcionando)">
-      <option name="closed" value="true" />
-      <created>1714356447319</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1714356447319</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Correcao do sequenciamento do pipeline">
-      <option name="closed" value="true" />
-      <created>1714403487223</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1714403487223</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Adicao do halt para finalização do pipeline">
-      <option name="closed" value="true" />
-      <created>1714428018782</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1714428018783</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Alteração nas chamadas do pipeline">
-      <option name="closed" value="true" />
-      <created>1714428590438</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1714428590438</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -177,41 +141,27 @@
     <MESSAGE value="Correção da verificação de variáveis no primeiro ciclo de execução" />
     <MESSAGE value="Atualização do projeto" />
     <MESSAGE value="Inserção do Noop" />
-    <MESSAGE value="Commit projeto com linhas iniciais do trabalho (Funcionando)" />
-    <MESSAGE value="Correcao do sequenciamento do pipeline" />
-    <MESSAGE value="Adicao do halt para finalização do pipeline" />
-    <MESSAGE value="Alteração nas chamadas do pipeline" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alteração nas chamadas do pipeline" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inserção do Noop" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/entidades/MIPS.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/entidades/Decodifica.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="54" />
+          <line>66</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
+        <PinnedItemInfo parentTag="entidades.Executa" memberName="mips" />
         <PinnedItemInfo parentTag="entidades.MIPS" memberName="instrucaoEX" />
-        <PinnedItemInfo parentTag="entidades.MIPS" memberName="instrucaoMEM" />
-        <PinnedItemInfo parentTag="entidades.MIPS" memberName="instrucaoWB" />
-        <PinnedItemInfo parentTag="entidades.MIPS" memberName="instrucaoID" />
-        <PinnedItemInfo parentTag="entidades.Escreve" memberName="instrucao" />
       </pinned-members>
     </pin-to-top-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="instrucaoID.instrucao" />
-        <watch expression="this" />
-        <watch expression="instrucaoWB.data" />
       </configuration>
     </watches-manager>
   </component>
