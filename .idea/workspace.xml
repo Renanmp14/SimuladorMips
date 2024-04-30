@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f00410f-cddd-4d64-ac24-e0f251530384" name="Changes" comment="Caso de teste com necessidade de alteração no pc (retomada do loop)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entidades/Decodifica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/Decodifica.java" afterDir="false" />
+    <list default="true" id="9f00410f-cddd-4d64-ac24-e0f251530384" name="Changes" comment="Alteração na checagem o escreveRegistrador quando acontece o beq loop">
       <change beforePath="$PROJECT_DIR$/src/entidades/Escreve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/Escreve.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entidades/MIPS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/MIPS.java" afterDir="false" />
     </list>
@@ -132,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714355505839</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Alteração na checagem o escreveRegistrador quando acontece o beq loop">
+      <option name="closed" value="true" />
+      <created>1714448955810</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714448955810</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -143,20 +149,16 @@
     <MESSAGE value="Correção da verificação de variáveis no primeiro ciclo de execução" />
     <MESSAGE value="Atualização do projeto" />
     <MESSAGE value="Inserção do Noop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inserção do Noop" />
+    <MESSAGE value="Alteração na checagem o escreveRegistrador quando acontece o beq loop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alteração na checagem o escreveRegistrador quando acontece o beq loop" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/entidades/MIPS.java</url>
-          <line>82</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/entidades/Escreve.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="34" />
+          <line>19</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

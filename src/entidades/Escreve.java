@@ -17,7 +17,7 @@ public class Escreve {
         }else if(instrucao.getOPCode().contains("add") || instrucao.getOPCode().contains("sub")){
             mips.registradores[instrucao.getOperando1()] = data;
         }else if(data == Integer.MAX_VALUE){
-            halt = true;
+            mips.pc = mips.instrucoes.length;
         }else if(instrucao.getOPCode().contains("halt")){
             halt = true;
         }else if(instrucao.getOPCode().contains("beq") && data == mips.memoria[11]){

@@ -5,7 +5,7 @@ public class MIPS {
     int[] memoria = new int[1024];
     int pc;
     private int contadorInstrucoes;
-    private String[] instrucoes;
+    String[] instrucoes;
     private Decodifica instrucaoID;
     private Executa instrucaoEX;
     private Memoria instrucaoMEM;
