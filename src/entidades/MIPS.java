@@ -39,6 +39,8 @@ public class MIPS {
             }
 
         }
+        System.out.println("Instruções finalizadas: " + contadorInstrucoes);
+        System.out.println("Fim do processo");
     }
 
     private void buscaInstrucao() {

@@ -41,12 +41,17 @@ public class Decodifica {
             return new Instrucao(fields[0], Integer.parseInt(fields[1]), Integer.parseInt(fields[2]), Integer.MAX_VALUE);
 
         }
+        if (instrucaoString.contains("beq") && instrucaoString.contains("loop")){
+            String[] fields = instrucaoString.split(" ");
+            return new Instrucao(fields[0], Integer.parseInt(fields[1]), Integer.parseInt(fields[2]), mips.memoria[11]);
+
+        }
         if (instrucaoString.contains("R")){
             instrucaoString = instrucaoString.replace("R", "");
         }
 
         if (instrucaoString.contains("loop")){
-            mips.memoria[11] = mips.pc; //Armazena o pc do inicio do loop
+            mips.memoria[11] = (mips.pc - 1); //Armazena o pc do inicio do loop
             String[] fields = instrucaoString.split(" ");
             return new Instrucao(fields[1], Integer.parseInt(fields[2]), Integer.parseInt(fields[3]),
                     Integer.parseInt(fields[4]));

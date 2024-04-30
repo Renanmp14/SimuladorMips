@@ -20,6 +20,8 @@ public class Escreve {
             halt = true;
         }else if(instrucao.getOPCode().contains("halt")){
             halt = true;
+        }else if(data == mips.memoria[11]){
+            mips.pc = mips.memoria[11];
         }
 
     }

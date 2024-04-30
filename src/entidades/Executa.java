@@ -48,6 +48,15 @@ public class Executa {
                 mips.memoria[1023] = instrucao.getOperando3();
             }
 
+        }else if(instrucao.getOPCode().contains("beq") && instrucao.getOperando3() == mips.memoria[11]){
+            int a = (instrucao.getOperando1() >= 0 && instrucao.getOperando1() < mips.registradores.length) ?
+                    mips.registradores[instrucao.getOperando1()] : instrucao.getOperando1();
+            int b = (instrucao.getOperando2() >= 0 && instrucao.getOperando2() < mips.registradores.length) ?
+                    mips.registradores[instrucao.getOperando2()] : instrucao.getOperando2();
+            if (a == b){
+                mips.memoria[1023] = instrucao.getOperando3();
+            }
+
         }
     }
 
