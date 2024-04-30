@@ -74,13 +74,14 @@ public class MIPS {
         instrucaoMEM.execute();
         instrucaoWB.setInstrucao(instrucaoMEM.getInstrucao());
         instrucaoWB.setData(instrucaoMEM.getData());
+        instrucaoMEM.setData(0);
 
         executa();
     }
 
     private void escreveRegistrador() {
         instrucaoWB.execute();
-
+        instrucaoWB.setData(0);
         acessoMemoria();
     }
 

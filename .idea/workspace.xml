@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f00410f-cddd-4d64-ac24-e0f251530384" name="Changes" comment="Inserção do Noop">
+    <list default="true" id="9f00410f-cddd-4d64-ac24-e0f251530384" name="Changes" comment="Caso de teste com necessidade de alteração no pc (retomada do loop)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entidades/Decodifica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/Decodifica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entidades/Escreve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/Escreve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entidades/MIPS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/MIPS.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,15 +150,27 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/entidades/MIPS.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="32" />
+          <line>82</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entidades/Escreve.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
-        <PinnedItemInfo parentTag="entidades.Executa" memberName="mips" />
+        <PinnedItemInfo parentTag="entidades.MIPS" memberName="registradores" />
         <PinnedItemInfo parentTag="entidades.MIPS" memberName="instrucaoEX" />
+        <PinnedItemInfo parentTag="entidades.Decodifica" memberName="instrucao" />
+        <PinnedItemInfo parentTag="entidades.Memoria" memberName="instrucao" />
+        <PinnedItemInfo parentTag="entidades.MIPS" memberName="instrucaoMEM" />
+        <PinnedItemInfo parentTag="entidades.Executa" memberName="instrucao" />
+        <PinnedItemInfo parentTag="entidades.MIPS" memberName="instrucaoWB" />
+        <PinnedItemInfo parentTag="entidades.MIPS" memberName="instrucaoID" />
+        <PinnedItemInfo parentTag="entidades.Escreve" memberName="instrucao" />
       </pinned-members>
     </pin-to-top-manager>
     <watches-manager>

@@ -4,7 +4,6 @@ public class Decodifica {
     private String instrucaoString;
     private Instrucao instrucao;
     private MIPS mips;
-    private static boolean instrucaoExecutada = false;
 
     public Decodifica(MIPS mips) {
         this.mips = mips;
@@ -52,10 +51,10 @@ public class Decodifica {
         }
 
         if (instrucaoString.contains("loop")){
-            if (!instrucaoExecutada) {
-                mips.memoria[11] = (mips.pc - 1);
-                instrucaoExecutada = true;
-            }//Armazena o pc do inicio do loop
+
+            mips.memoria[11] = (mips.pc - 1);
+
+            //Armazena o pc do inicio do loop
             String[] fields = instrucaoString.split(" ");
             return new Instrucao(fields[1], Integer.parseInt(fields[2]), Integer.parseInt(fields[3]),
                     Integer.parseInt(fields[4]));
