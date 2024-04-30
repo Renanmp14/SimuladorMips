@@ -9,7 +9,7 @@ public class Executa {
         this.mips = mips;
     }
 
-    public void execute() {
+    public void run() {
         //Trazer as constantes até aqui para verificação
         if (instrucao.getOPCode().contains("addi") || instrucao.getOPCode().contains("subi") ) {
             int a = (instrucao.getOperando1() >= 0 && instrucao.getOperando1() < mips.registradores.length) ?

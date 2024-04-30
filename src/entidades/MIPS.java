@@ -58,20 +58,20 @@ public class MIPS {
     }
 
     private void decodifica() {
-        instrucaoID.execute();
+        instrucaoID.run();
         instrucaoEX.setInstrucao(instrucaoID.getInstrucao());
         buscaInstrucao();
     }
 
     private void executa() {
-        instrucaoEX.execute();
+        instrucaoEX.run();
         instrucaoMEM.setInstrucao(instrucaoEX.getInstrucao());
 
         decodifica();
     }
 
     private void acessoMemoria() {
-        instrucaoMEM.execute();
+        instrucaoMEM.run();
         instrucaoWB.setInstrucao(instrucaoMEM.getInstrucao());
         instrucaoWB.setData(instrucaoMEM.getData());
         instrucaoMEM.setData(0);
@@ -80,7 +80,7 @@ public class MIPS {
     }
 
     private void escreveRegistrador() {
-        instrucaoWB.execute();
+        instrucaoWB.run();
         System.out.println(instrucaoWB.getInstrucao().toString());
 
         instrucaoWB.setData(0);

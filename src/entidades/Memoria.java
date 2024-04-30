@@ -9,7 +9,7 @@ public class Memoria {
         this.mips = mips;
     }
 
-    public void execute() {
+    public void run() {
         if (instrucao.getOPCode().contains("addi") || instrucao.getOPCode().contains("add") ||
                 instrucao.getOPCode().contains("sub") || instrucao.getOPCode().contains("subi")) {
             data = mips.memoria[0];

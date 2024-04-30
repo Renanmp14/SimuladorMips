@@ -11,7 +11,7 @@ public class Escreve {
         halt = false;
     }
 
-    public void execute() {
+    public void run() {
         if (instrucao.getOPCode().contains("addi") || instrucao.getOPCode().contains("subi")) {
             mips.registradores[instrucao.getOperando2()] = data;
         }else if(instrucao.getOPCode().contains("add") || instrucao.getOPCode().contains("sub")){

@@ -9,7 +9,7 @@ public class Decodifica {
         this.mips = mips;
     }
 
-    public Instrucao execute() {
+    public Instrucao run() {
         if(instrucaoString.contains("addi") || instrucaoString.contains("subi")){
                 setInstrucao(parserInstrucao(instrucaoString));
                 return getInstrucao();

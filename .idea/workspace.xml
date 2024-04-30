@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f00410f-cddd-4d64-ac24-e0f251530384" name="Changes" comment="Modificação no halt quando o beq done encontra a condição verdadeira">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entidades/Instrucao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/Instrucao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entidades/MIPS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidades/MIPS.java" afterDir="false" />
-    </list>
+    <list default="true" id="9f00410f-cddd-4d64-ac24-e0f251530384" name="Changes" comment="Adição da impressão que foi executada pela etapa de escreveRegistrador" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714449575192</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Adição da impressão que foi executada pela etapa de escreveRegistrador">
+      <option name="closed" value="true" />
+      <created>1714499791762</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1714499791762</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -160,7 +164,8 @@
     <MESSAGE value="Inserção do Noop" />
     <MESSAGE value="Alteração na checagem o escreveRegistrador quando acontece o beq loop" />
     <MESSAGE value="Modificação no halt quando o beq done encontra a condição verdadeira" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modificação no halt quando o beq done encontra a condição verdadeira" />
+    <MESSAGE value="Adição da impressão que foi executada pela etapa de escreveRegistrador" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adição da impressão que foi executada pela etapa de escreveRegistrador" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
