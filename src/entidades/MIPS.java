@@ -81,7 +81,7 @@ public class MIPS {
 
     private void escreveRegistrador() {
         instrucaoWB.run();
-        System.out.println(instrucaoWB.getInstrucao().toString());
+        System.out.println("Finalizada no Write Back:" + instrucaoWB.getInstrucao().toString());
 
         instrucaoWB.setData(0);
         acessoMemoria();

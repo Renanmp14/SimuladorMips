@@ -10,29 +10,27 @@ public class Decodifica {
     }
 
     public Instrucao run() {
-        if(instrucaoString.contains("addi") || instrucaoString.contains("subi")){
-                setInstrucao(parserInstrucao(instrucaoString));
-                return getInstrucao();
+        Instrucao instrucao = null;
+
+        if(instrucaoString.contains("addi") || instrucaoString.contains("subi")) {
+            instrucao = parserInstrucao(instrucaoString);
         }
-        else if (instrucaoString.contains("noop")){
-            setInstrucao(new Instrucao("Noop"));
-            return getInstrucao();
+        else if (instrucaoString.contains("noop")) {
+            instrucao = new Instrucao("Noop");
 
         }
         else if (instrucaoString.contains("loop") || instrucaoString.contains("add") ||
-                instrucaoString.contains("sub")){
-            setInstrucao(parserInstrucao(instrucaoString));
-            return getInstrucao();
+                instrucaoString.contains("sub")) {
+            instrucao = parserInstrucao(instrucaoString);
 
         } else if (instrucaoString.contains("beq")) {
-            setInstrucao(parserInstrucao(instrucaoString));
-            return getInstrucao();
+            instrucao = parserInstrucao(instrucaoString);
 
         } else if (instrucaoString.contains("halt")) {
-            setInstrucao(new Instrucao("halt"));
-            return getInstrucao();
+            instrucao = new Instrucao("halt");
         }
-        return null;
+        setInstrucao(instrucao);
+        return getInstrucao();
     }
 
     private Instrucao parserInstrucao(String instrucaoString){

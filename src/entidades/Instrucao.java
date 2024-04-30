@@ -51,7 +51,7 @@ public class Instrucao {
 
     @Override
     public String toString() {
-        return "Instrucao - OPCode: " + OPCode + ", Operando1: " + operando1 +
+        return "OPCode: " + OPCode + ", Operando1: " + operando1 +
                 ", Operando2: " + operando2 +  ", Operando3: " + operando3;
     }
 }
